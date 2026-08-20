@@ -7,11 +7,11 @@ Original file is located at
     https://colab.research.google.com/drive/1cWrqYord8nbKMQ6-NWKs9I2W6-gpAIpq
 """
 
-import streamlit as lt
+import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("wine_type_prediction.pkl")
+model = joblib.load("Wine_type_prediction.pkl")
 
 st.title("Wine Type Prediction !")
 fixed_acidity = st.number_input("Fixed Acidity")
@@ -42,9 +42,8 @@ df = pd.DataFrame({
     "quality": [quality]
 })
 
-if st.button("predict wine type"):
-    prediction = model.predict(df)[0]
-    st.write(f"The predicted wine type is: {prediction[0]}")
+if st.button("Predict Wine Type"):
+    prediction = model.predict(df)
 
     if prediction == 0:
       st.write("Red Wine")
