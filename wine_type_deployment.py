@@ -13,7 +13,7 @@ import joblib
 
 model = joblib.load("wine_type_prediction.pkl")
 
-st.title("Wine Type Prediction  !")
+st.title("Wine Type Prediction")
 
 fixed_acidity = st.number_input("Fixed Acidity")
 volatile_acidity = st.number_input("Volatile Acidity")
