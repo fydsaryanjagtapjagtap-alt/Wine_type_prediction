@@ -11,7 +11,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load("Wine_type_prediction.pkl")
+model = joblib.load("wine_type_prediction.pkl")
 
 st.title("Wine Type Prediction !")
 fixed_acidity = st.number_input("Fixed Acidity")
